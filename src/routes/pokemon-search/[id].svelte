@@ -26,9 +26,11 @@
     hp: 'Hit Points',
     attack: 'Attack',
     defense: 'Defense',
+    sp_attack: 'Special Attack',
+    sp_defense: 'Special Defense',
+    speed: 'Speed',
     height_m: 'Height',
     weight_kg: 'Weight',
-    speed: 'Speed',
     generation: 'Generation',
   };
 
