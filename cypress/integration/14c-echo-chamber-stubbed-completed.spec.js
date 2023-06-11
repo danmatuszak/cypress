@@ -48,12 +48,15 @@ describe('Signing in with a seeded database', () => {
   });
 
   it('should send a POST request when submitting the form', () => {
+    //hitting enter should fire the request
     cy.get('@newPostInput').type('Hello world{enter}');
     cy.wait('@createPostApi').its('request.body').should('contain', 'Hello world');
   });
 
   describe('An individual post', () => {
     beforeEach(() => {
+      // just make sure it's doing what's intended on the frontend
+      // so intercept
       cy.get('@previews').first().click();
       cy.intercept('PATCH', '/echo-chamber/api/*').as('patchRequest');
       cy.intercept('DELETE', '/echo-chamber/api/*').as('deleteRequest');

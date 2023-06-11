@@ -47,6 +47,7 @@ describe('Setting the cookie', () => {
 
 describe('Setting the cookie with real data', () => {
   beforeEach(() => {
+    // good block of code to place in a command, i.e. getUser
     cy.task('seed');
     cy.request('/echo-chamber/api/users')
       .then((response) => {
