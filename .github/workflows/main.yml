@@ -15,6 +15,7 @@ jobs:
           headless: true
           record: true
           start: npm start
+          generate: npx primsa generate
           wait-on: http://localhost:3000
           pluginsFile: cypress/plugins/index.ts
         env:
