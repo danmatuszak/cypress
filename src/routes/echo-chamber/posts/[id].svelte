@@ -34,6 +34,7 @@
   $: isEditing = $page.query.has('editing');
 
   const updatePost = () => {
+    console.log('=======inside update', post.id)
     fetch('/echo-chamber/api/' + post.id, {
       method: 'PATCH',
       headers: {
@@ -49,6 +50,7 @@
   };
 
   const deletePost = () => {
+    console.log('======inside delete', post.id)
     fetch('/echo-chamber/api/' + post.id, {
       method: 'DELETE',
     }).then((response) => {

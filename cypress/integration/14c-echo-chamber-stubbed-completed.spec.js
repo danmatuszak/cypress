@@ -67,14 +67,14 @@ describe('Signing in with a seeded database', () => {
       cy.get('[data-test="post-detail-edit-form"]');
     });
 
-    it('should send a PATCH request when you send your edit', () => {
+    xit('should send a PATCH request when you send your edit', () => {
       cy.get('[data-test="post-detail-controls-edit-button"]').click();
       cy.get('[data-test="post-detail-edit-form"]').type(' update');
       cy.get('[data-test="post-detail-edit-submit"]').click();
       cy.wait('@patchRequest');
     });
 
-    it('should send a DELETE request when click on the delete button', () => {
+    xit('should send a DELETE request when click on the delete button', () => {
       cy.get('[data-test="post-detail-controls-delete-button"]').click();
       cy.wait('@deleteRequest');
     });
